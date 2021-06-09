@@ -18,7 +18,6 @@ export const basketSlice = createSlice({
       )
 
       let newBasket = [...state.items]
-
       // If the item exist, index will be the array item current place number else return -1
       if (index >= 0) {
         // Item exist in basket.. Remove it
@@ -28,7 +27,6 @@ export const basketSlice = createSlice({
           `Cant remove the product (id: ${action.payload.id}) as its is not in basket`
         )
       }
-
       state.items = newBasket
     },
   },
